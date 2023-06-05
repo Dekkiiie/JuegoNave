@@ -7,7 +7,7 @@ public class AsteroidGenerator : MonoBehaviour
     public float spawnRange;
     public float amountToSpawn;
     private Vector3 spawnPoint;
-    public GameObject asteroid;
+    public GameObject [] asteroid;
     public float startSafeRange;
     private List<GameObject> objectsToPlace = new List<GameObject>();
 
@@ -24,11 +24,11 @@ public class AsteroidGenerator : MonoBehaviour
                 PickSpawnPoint();
             }
 
-            objectsToPlace.Add(Instantiate(asteroid, spawnPoint, Quaternion.Euler(Random.Range(0f,360f), Random.Range(0f, 360f), Random.Range(0f, 360f))));
+            objectsToPlace.Add(Instantiate(asteroid[Random.Range(0,3)], spawnPoint, Quaternion.Euler(Random.Range(0f,360f), Random.Range(0f, 360f), Random.Range(0f, 360f))));
             objectsToPlace[i].transform.parent = this.transform;
         }
 
-        asteroid.SetActive(true);
+        asteroid[asteroid.Length].SetActive(true);
     }
 
     // Update is called once per frame
