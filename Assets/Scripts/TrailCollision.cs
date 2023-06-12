@@ -86,7 +86,7 @@ public class TrailCollision : MonoBehaviour
                 if (hit.collider.CompareTag(m_otherTag))
                 {
                     Debug.Log(hit.collider.gameObject.name);
-                    //Destroy(hit.collider.gameObject);
+                    Destroy(hit.collider.gameObject);
                     IDamageable damageable = hit.collider.GetComponent<IDamageable>();
                     if (damageable != null)
                     {
