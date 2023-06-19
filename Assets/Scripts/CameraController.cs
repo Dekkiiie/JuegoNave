@@ -13,13 +13,17 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
+       
         rB = player.GetComponent<Rigidbody>();
     }
 
+	private void Update()
+	{
+        
+    }
 
 
- 
-    private void LateUpdate()
+	private void LateUpdate()
     {
         Vector3 playerForward = (rB.velocity + player.transform.forward).normalized;
         transform.position = Vector3.Lerp(transform.position, player.position + player.TransformVector(oFFset) + playerForward * (-5f), speed * Time.deltaTime);
