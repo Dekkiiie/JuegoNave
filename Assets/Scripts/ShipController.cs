@@ -18,6 +18,7 @@ public class ShipController : MonoBehaviour
     public Rigidbody rb;
 
     public KeyCode Accel;
+    Vector3 movement;
 
     public string ver,hov,hor,roll;
 
@@ -80,10 +81,15 @@ public class ShipController : MonoBehaviour
 
         transform.position += transform.forward * activeFowardSpeed * Time.deltaTime;
 
-        Vector3 movement = new Vector3(activeStrafeSpeed, 0f, activeFowardSpeed);
+         movement = new Vector3(activeStrafeSpeed, 0f, activeFowardSpeed);
 
-        rb.AddForce(movement * fowardSpeed);
+       
         //transform.position += (transform.right * activeStrafeSpeed * Time.deltaTime) + (transform.up * activeHoverSpeed * Time.deltaTime);
 
+    }
+
+    private void FixedUpdate()
+    {
+        rb.AddForce(movement * fowardSpeed);
     }
 }

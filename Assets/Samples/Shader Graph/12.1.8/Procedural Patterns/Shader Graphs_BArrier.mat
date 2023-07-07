@@ -43,22 +43,22 @@ Material:
     - _AlphaClip: 1
     - _Blend: 3
     - _CastShadows: 1
-    - _Cull: 2
+    - _Cull: 0
     - _DstBlend: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 2
-    - _StripeGradientSize: 30
-    - _StripeNoiseSize: 30
-    - _StripesSize: 1
+    - _StripeGradientSize: 50.7
+    - _StripeNoiseSize: 92.25
+    - _StripesSize: -1.1
     - _Surface: 1
     - _ZTest: 2
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _StripeColor: {r: 1, g: 1, b: 1, a: 0.8156863}
+    - _StripeColor: {r: 0.9728137, g: 1.6460377, b: 3.9533494, a: 1}
     - _StripeNoiseSpeed: {r: 0, g: 0.1, b: 0, a: 0}
-    - _StripesTiling: {r: 50, g: 50, b: 0, a: 0}
+    - _StripesTiling: {r: 60.27, g: 62, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1391263280968643694
 MonoBehaviour:
