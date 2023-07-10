@@ -11,10 +11,10 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: da3e16d1b6ce43645a35fdc1108bb58b,
     type: 3}
   m_ValidKeywords:
-  - _ALPHATEST_ON
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _ALPHAMODULATE_ON
+  - _SPECULAR_SETUP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -23,6 +23,7 @@ Material:
     RenderType: Transparent
   disabledShaderPasses:
   - DepthOnly
+  - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -40,24 +41,27 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 1
+    - _Alpha: -0.04
+    - _AlphaClip: 0
     - _Blend: 3
-    - _CastShadows: 1
-    - _Cull: 0
+    - _CastShadows: 0
+    - _Cull: 2
     - _DstBlend: 0
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _SrcBlend: 2
-    - _StripeGradientSize: 50.7
-    - _StripeNoiseSize: 92.25
-    - _StripesSize: -1.1
+    - _StripeGradientSize: 188.2
+    - _StripeNoiseSize: 92.83
+    - _StripesSize: 1.04
     - _Surface: 1
-    - _ZTest: 2
+    - _WorkflowMode: 0
+    - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _StripeColor: {r: 0.9728137, g: 1.6460377, b: 3.9533494, a: 1}
-    - _StripeNoiseSpeed: {r: 0, g: 0.1, b: 0, a: 0}
+    - _StripeColor: {r: 0.9935119, g: 1.6558532, b: 3.9533494, a: 0}
+    - _StripeNoiseSpeed: {r: 0, g: 0.01, b: 0, a: 0}
     - _StripesTiling: {r: 60.27, g: 62, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1391263280968643694

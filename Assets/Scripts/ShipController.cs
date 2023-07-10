@@ -25,6 +25,10 @@ public class ShipController : MonoBehaviour
     private float saveSpeed;
 
     bool nitroOn;
+
+   [SerializeField] private float health;
+    public float maxHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,9 +39,15 @@ public class ShipController : MonoBehaviour
         saveTimeAcc = timeAccel;
         rb = GetComponent<Rigidbody>();
         saveSpeed = fowardSpeed;
+        health = maxHealth;
     }
 
     // Update is called once per frame
+    public void Boost(float boost)
+	{
+        fowardSpeed *= boost;
+        nitroOn = true;
+	}
     void Update()
     {
 
@@ -45,8 +55,7 @@ public class ShipController : MonoBehaviour
 
         if (Input.GetKeyDown(Accel)&&cooldown <= 0 && nitroOn == false)
         {
-            nitroOn = true;
-            fowardSpeed *= 5;
+            Boost(5f);
             
         }
 
@@ -92,4 +101,23 @@ public class ShipController : MonoBehaviour
     {
         rb.AddForce(movement * fowardSpeed);
     }
+    
+	private void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.CompareTag("Asteroid"))
+		{
+            health--;
+
+            if(health <= 0)
+			{
+                Destroy(gameObject);
+			}
+		}
+
+		if (collision.gameObject.CompareTag("PowerUp"))
+		{
+            Boost(5f);
+            Destroy(collision.gameObject);
+        }
+	}
 }
