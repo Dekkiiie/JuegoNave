@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShipController : MonoBehaviour
 {
+
+    public Image leftBar,rightBar,nitroBar;
+
+
 
     public float fowardSpeed = 25f,strafeSpeed = 7.5f,hoverSpeed = 5f;
     private float activeFowardSpeed,activeStrafeSpeed,activeHoverSpeed;
@@ -35,7 +40,7 @@ public class ShipController : MonoBehaviour
         screenCenter.x = Screen.width * 0.5f;
         screenCenter.y = Screen.height * .5f;
 
-        saveCooldown = cooldown;
+        
         saveTimeAcc = timeAccel;
         rb = GetComponent<Rigidbody>();
         saveSpeed = fowardSpeed;
@@ -50,13 +55,16 @@ public class ShipController : MonoBehaviour
 	}
     void Update()
     {
+        if(nitroOn == false)
+        {
+            cooldown += Time.deltaTime;
 
-        cooldown -= Time.deltaTime;
+        }
 
-        if (Input.GetKeyDown(Accel)&&cooldown <= 0 && nitroOn == false)
+        if (Input.GetKeyDown(Accel)&&cooldown >= saveCooldown && nitroOn == false)
         {
             Boost(5f);
-            
+            cooldown = 0;
         }
 
         if(nitroOn == true )
@@ -66,7 +74,7 @@ public class ShipController : MonoBehaviour
             {
                 fowardSpeed = saveSpeed;
                 nitroOn = false;
-                cooldown = saveCooldown;
+               
                 timeAccel = saveTimeAcc;
             }
         }
@@ -94,7 +102,18 @@ public class ShipController : MonoBehaviour
 
        
         //transform.position += (transform.right * activeStrafeSpeed * Time.deltaTime) + (transform.up * activeHoverSpeed * Time.deltaTime);
+        MostrarBarraHP();
+    }
 
+
+    void MostrarBarraHP()
+    {
+        float _hp = health / maxHealth;
+        leftBar.fillAmount = _hp;
+        rightBar.fillAmount = _hp;
+
+        float _nitro = cooldown / saveCooldown;
+        nitroBar.fillAmount = _nitro;
     }
 
     private void FixedUpdate()

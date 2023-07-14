@@ -322,7 +322,7 @@ MonoBehaviour:
   - {fileID: 2267785107135626120, guid: 3810a9cbefe0cd44fa788bcfa7dabf7e, type: 3}
   - {fileID: 7956946768845190973, guid: c6eab9ff805e8cb47b9ca33f62eb6efd, type: 3}
   - {fileID: 6642371817185135095, guid: 483000a86fb41d34ba1ff99bfb46178e, type: 3}
-  startSafeRange: 1
+  startSafeRange: 0
 --- !u!4 &280389105
 Transform:
   m_ObjectHideFlags: 0
@@ -397,7 +397,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 375
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 476073340}
   - component: {fileID: 476073339}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: Nitro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1427,7 +1427,7 @@ GameObject:
   - component: {fileID: 872145237}
   - component: {fileID: 872145236}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: LeftBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1693,7 +1693,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 439
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2188,7 +2188,7 @@ GameObject:
   - component: {fileID: 1338550278}
   - component: {fileID: 1338550277}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: Nitro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2264,7 +2264,7 @@ GameObject:
   - component: {fileID: 1356873441}
   - component: {fileID: 1356873440}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: RightBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2340,7 +2340,7 @@ GameObject:
   - component: {fileID: 1432006286}
   - component: {fileID: 1432006285}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: RightBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2780,6 +2780,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moon 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 985008987f21dd747adde30ea107308c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985008987f21dd747adde30ea107308c, type: 3}
 --- !u!1 &1842468141
@@ -2836,7 +2841,7 @@ GameObject:
   - component: {fileID: 1921424506}
   - component: {fileID: 1921424505}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: LeftBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3480,17 +3485,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: aed8c6f1c4ef61e48aa3577c4b8e4f6d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 100000
+      value: 65000
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aed8c6f1c4ef61e48aa3577c4b8e4f6d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 100000
+      value: 65000
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aed8c6f1c4ef61e48aa3577c4b8e4f6d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 100000
+      value: 65000
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aed8c6f1c4ef61e48aa3577c4b8e4f6d,
         type: 3}
@@ -3579,6 +3584,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aed8c6f1c4ef61e48aa3577c4b8e4f6d,
         type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aed8c6f1c4ef61e48aa3577c4b8e4f6d,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -3613,7 +3623,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1294742132473973656, guid: cac8b060980314541a660fd7addbd9cc,
         type: 3}
+      propertyPath: Accel
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1294742132473973656, guid: cac8b060980314541a660fd7addbd9cc,
+        type: 3}
+      propertyPath: leftBar
+      value: 
+      objectReference: {fileID: 872145236}
+    - target: {fileID: 1294742132473973656, guid: cac8b060980314541a660fd7addbd9cc,
+        type: 3}
+      propertyPath: cooldown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1294742132473973656, guid: cac8b060980314541a660fd7addbd9cc,
+        type: 3}
+      propertyPath: nitroBar
+      value: 
+      objectReference: {fileID: 476073339}
+    - target: {fileID: 1294742132473973656, guid: cac8b060980314541a660fd7addbd9cc,
+        type: 3}
+      propertyPath: rightBar
+      value: 
+      objectReference: {fileID: 1356873440}
+    - target: {fileID: 1294742132473973656, guid: cac8b060980314541a660fd7addbd9cc,
+        type: 3}
       propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1294742132473973656, guid: cac8b060980314541a660fd7addbd9cc,
+        type: 3}
+      propertyPath: saveCooldown
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1294742132473973657, guid: cac8b060980314541a660fd7addbd9cc,
@@ -3687,7 +3727,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7103529649643186450, guid: 52943678dc399014eaf0a604575cbd82,
         type: 3}
+      propertyPath: leftBar
+      value: 
+      objectReference: {fileID: 1921424505}
+    - target: {fileID: 7103529649643186450, guid: 52943678dc399014eaf0a604575cbd82,
+        type: 3}
+      propertyPath: cooldown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103529649643186450, guid: 52943678dc399014eaf0a604575cbd82,
+        type: 3}
+      propertyPath: nitroBar
+      value: 
+      objectReference: {fileID: 1338550277}
+    - target: {fileID: 7103529649643186450, guid: 52943678dc399014eaf0a604575cbd82,
+        type: 3}
+      propertyPath: rightBar
+      value: 
+      objectReference: {fileID: 1432006285}
+    - target: {fileID: 7103529649643186450, guid: 52943678dc399014eaf0a604575cbd82,
+        type: 3}
       propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103529649643186450, guid: 52943678dc399014eaf0a604575cbd82,
+        type: 3}
+      propertyPath: saveCooldown
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7103529649643186451, guid: 52943678dc399014eaf0a604575cbd82,
